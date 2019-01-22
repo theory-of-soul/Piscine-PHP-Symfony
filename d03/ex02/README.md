@@ -1,0 +1,1 @@
+Install version 4.8.27 of the PHPUnit package as a development requirement.

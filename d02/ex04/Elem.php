@@ -1,6 +1,8 @@
 <?php
 
-namespace ex03;
+namespace ex04;
+
+include_once "MyException.php";
 
 class Elem {
 
@@ -24,22 +26,20 @@ class Elem {
         "div"
     );
 
-    private $element = array(
-        "tagName" => null,
-        "content" => array()
-    );
+    private $element;
 
     private $html = "";
 
-    public function __construct($tagName, $content = null) {
+    public function __construct($tagName, $content = null, $attributes = array()) {
         if (in_array($tagName, $this->supportTags)) {
             $this->element = array(
                 "tagName" => $tagName,
-                "content" => is_null($content) ? array() : array($content)
+                "content" => is_null($content) ? array() : array($content),
+                "attributes" => $attributes
             );
         } else {
-            $this->html .= "tag {$tagName} doesn't support\n";
-            exit;
+            $myException = new MyException();
+            $myException->throwTagException($tagName);
         }
     }
 
@@ -52,7 +52,8 @@ class Elem {
 
         foreach ($this->element as $key => $value) {
             if ($key === "tagName") {
-                $this->html .= "\n<{$value}>";
+                $attributes = $this->getInlineAttributes($this->element["attributes"]);
+                $this->html .= "\n<{$value}{$attributes}>";
                 array_push($tagNeedToClose, $value);
             } elseif ($key === "content") {
                 foreach ($value as $contentKey => $contentValue) {
@@ -73,5 +74,15 @@ class Elem {
         }
 
         return $this->html;
+    }
+
+    private function getInlineAttributes($attributes) {
+        $attrString = "";
+
+        foreach($attributes as $key => $value) {
+            $attrString .= " {$key}=\"{$value}\"";
+        }
+
+        return $attrString;
     }
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace ex03;
+namespace ex04;
 
 class TemplateEngine {
 

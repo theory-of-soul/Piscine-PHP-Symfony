@@ -1,0 +1,9 @@
+{
+    "name": "theoryOfSoul/weather",
+    "version": "0.1.0-dev",
+    "description": "A function that will return the current weather in Kiev",
+    "require": {
+        "php": "5.5.0",
+        "tcdent/php-restclient": "^0.1.7"
+    }
+}
