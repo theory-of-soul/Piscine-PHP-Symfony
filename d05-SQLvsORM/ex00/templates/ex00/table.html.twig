@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Table</title>
+</head>
+<body style="position: relative">
+<div style="margin: 10px; margin-top: 50px; position: relative;">
+    <a href="/table?create=true" style="padding: 15px; border: 1px solid #eee; color: #ee2d4d">
+        Create table
+    </a>
+</div>
+
+<div style="margin: 10px; margin-top: 30px">
+    {% if error is same as("00000") %}
+        <p>Таблица успешно создана</p>
+    {% elseif error is same as(false) %}
+        <p>Для создания таблицы нажать на кнопку</p>
+    {% else %}
+        <p>Ошибка в создании таблицы</p>
+    {% endif %}
+</div>
+
+</body>
+</html>
