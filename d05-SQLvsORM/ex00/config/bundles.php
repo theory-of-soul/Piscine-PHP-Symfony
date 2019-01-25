@@ -16,4 +16,5 @@ return [
     Symfony\Bundle\WebServerBundle\WebServerBundle::class => ['dev' => true],
     Symfony\Bundle\WebServerBundle\WebServerBundle::class => ['dev' => true],
     App\Unit\ex00Bundle\UnitEx00Bundle::class => ['all' => true],
+    App\Unit\ex01Bundle\UnitEx01Bundle::class => ['all' => true],
 ];

@@ -1,3 +1,13 @@
 #index:
 #    path: /
 #    controller: App\Controller\DefaultController::index
+
+unit_ex00:
+    # loads routes from the PHP annotations of the controllers found in that directory
+    resource: '../src/Unit/ex00Bundle/Controller/'
+    type:     annotation
+
+unit_ex01:
+    # loads routes from the PHP annotations of the controllers found in that directory
+    resource: '../src/Unit/ex01Bundle/Controller/'
+    type:     annotation

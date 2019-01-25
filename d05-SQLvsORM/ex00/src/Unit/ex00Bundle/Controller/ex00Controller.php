@@ -1,13 +1,11 @@
 <?php
 
-namespace App\Controller;
+namespace App\Unit\ex00Bundle\Controller;
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Doctrine\DBAL\Configuration;
-
-use Psr\Log\LoggerInterface;
 
 class ex00Controller extends AbstractController
 {
@@ -23,7 +21,7 @@ class ex00Controller extends AbstractController
             $error = $statement->errorCode();
         }
 
-        return $this->render('ex00/table.html.twig', [
+        return $this->render('@ex00/table.html.twig', [
             'error' => $error
         ]);
     }
