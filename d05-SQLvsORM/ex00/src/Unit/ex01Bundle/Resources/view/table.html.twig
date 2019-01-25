@@ -9,19 +9,13 @@
 </head>
 <body style="position: relative">
 <div style="margin: 10px; margin-top: 50px; position: relative;">
-    <a href="/table?create=true" style="padding: 15px; border: 1px solid #eee; color: #ee2d4d">
-        Create table!
+    <a href="/ex01?create=true" style="padding: 15px; border: 1px solid #eee; color: #ee2d4d">
+        Create table EX01!
     </a>
 </div>
 
 <div style="margin: 10px; margin-top: 30px">
-    {% if error is same as("00000") %}
-        <p>Таблица успешно создана</p>
-    {% elseif error is same as(false) %}
-        <p>Для создания таблицы нажать на кнопку</p>
-    {% else %}
-        <p>Ошибка в создании таблицы</p>
-    {% endif %}
+    content => {{ content }}
 </div>
 
 </body>
