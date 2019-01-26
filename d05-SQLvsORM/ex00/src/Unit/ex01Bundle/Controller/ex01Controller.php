@@ -14,12 +14,12 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class ex01Controller extends AbstractController
 {
     private $migrationWasCreated = false;
+
     /**
      * @Route("/ex01")
      */
     public function showTablePage(Request $request, KernelInterface $kernel, LoggerInterface $logger)
     {
-
         $content = '';
 
         if ($request->query->get('create') == 'true') {

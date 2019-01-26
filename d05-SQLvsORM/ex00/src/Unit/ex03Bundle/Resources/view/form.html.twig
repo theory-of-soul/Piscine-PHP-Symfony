@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Table</title>
+</head>
+<body style="position: relative">
+<div style="margin: 10px; margin-top: 50px; position: relative;">
+    {{ form(form) }}
+</div>
+<div>
+    Info: {{ info }}
+</div>
+<div>
+    <table>
+        <tr>
+            <th>username</th>
+            <th>name</th>
+            <th>email</th>
+            <th>enable</th>
+            <th>birthday</th>
+            <th>address</th>
+        </tr>
+        {% for user in users %}
+            <tr>
+                <td>{{ user.username }}</td>
+                <td>{{ user.name }}</td>
+                <td>{{ user.email }}</td>
+                <td>{{ user.enable }}</td>
+                <td>{{ user.birthday | date('d/m/Y H:i', timezone="Europe/Kiev") }}</td>
+                <td>{{ user.address }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</div>
+</body>
+</html>

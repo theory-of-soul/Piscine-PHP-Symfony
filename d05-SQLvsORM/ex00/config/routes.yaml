@@ -11,3 +11,11 @@ unit_ex01:
     # loads routes from the PHP annotations of the controllers found in that directory
     resource: '../src/Unit/ex01Bundle/Controller/'
     type:     annotation
+
+unit_ex02:
+    resource: '../src/Unit/ex02Bundle/Controller/'
+    type:     annotation
+
+unit_ex03:
+    resource: '../src/Unit/ex03Bundle/Controller/'
+    type:     annotation

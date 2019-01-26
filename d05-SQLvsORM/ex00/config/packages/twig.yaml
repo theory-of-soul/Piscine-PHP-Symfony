@@ -5,3 +5,5 @@ twig:
     paths:
             '%kernel.project_dir%/src/Unit/ex00Bundle/Resources/view': ex00
             '%kernel.project_dir%/src/Unit/ex01Bundle/Resources/view': ex01
+            '%kernel.project_dir%/src/Unit/ex02Bundle/Resources/view': ex02
+            '%kernel.project_dir%/src/Unit/ex03Bundle/Resources/view': ex03
