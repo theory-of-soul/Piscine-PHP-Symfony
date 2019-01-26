@@ -19,3 +19,7 @@ unit_ex02:
 unit_ex03:
     resource: '../src/Unit/ex03Bundle/Controller/'
     type:     annotation
+
+unit_ex04:
+    resource: '../src/Unit/ex04Bundle/Controller/'
+    type:     annotation
